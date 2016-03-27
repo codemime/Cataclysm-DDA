@@ -46,7 +46,7 @@ struct gate_data {
         void load( JsonObject &jo );
 
     private:
-        ter_id get_ter( const std::string &ter_name, ter_id &cached_ter ) const {
+        inline static ter_id get_ter( const std::string &ter_name, ter_id &cached_ter ) {
             if( cached_ter == t_null ) {
                 cached_ter = terfind( ter_name );
             }
