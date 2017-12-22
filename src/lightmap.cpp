@@ -68,7 +68,7 @@ void map::build_transparency_cache( const int zlev )
             // Uniform maps get their own special case
             // They are almost 20 times as common as non-uniform ones
             if( cur_submap->is_uniform ) {
-                if( !( cur_submap->ter[0][0].obj().transparent &&
+                if( !( cur_submap->ter[0][0].obj().transparent ||
                        cur_submap->frn[0][0].obj().transparent ) ) {
                     for( int sx = 0; sx < SEEX; ++sx ) {
                         const int x = sx + smx * SEEX;
